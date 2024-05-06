@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head>
+  <script>
+    function calculate(num1, operator, num2) { 
+      switch(operator) { 
+        case '+': 
+          return num1 + num2; 
+        case '-': 
+          return num1 - num2; 
+        case '*': 
+          return num1 * num2; 
+        case '/': 
+          if(num2 != 0) { 
+            return num1 / num2; 
+          } else { 
+            return "Error: Division by zero is not allowed."; 
+          } 
+        default: 
+        return "Error: Invalid operator."; 
+      } 
+    } 
+    
+    function performCalculation() { 
+      var num1 = parseFloat(document.getElementById('num1').value); 
+      var operator = document.getElementById('operator').value; 
+      var num2 = parseFloat(document.getElementById('num2').value); 
+      var result = calculate(num1, operator, num2); 
+      document.getElementById('result').value = "The result is: " + result; 
+    }
+  </script>
+</head>
+<body>
+  <form id="calculatorForm">
+    <label for="num1">Number 1: </label>
+    <input type="number" id="num1" value="0"><br><br>
+    
+    <label for="operator">Operator: </label>
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select><br><br>
+    
+    <label for="num2">Number 2: </label>
+    <input type="number" id="num2" value="0"><br><br>
+    
+    <button type="button" onclick="performCalculation()">Calculate</button>
+    <button type="reset">Reset</button><br><br>
+    
+    <output id="result"></output>
+  </form>
+
+
+</body></html>
