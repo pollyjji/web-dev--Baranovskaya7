@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+
+<div class="owl-carousel">
+    <div class="item">
+        <h2>Question 1</h2>
+        <h3>Explain “repaint” and “reflow” of the webpage.</h3>
+        <p>
+            "Redrawing" and "reformatting" are terms used to describe the rendering process of a web page. When a web page loads or refreshes, the browser needs to determine how the elements should be displayed and positioned on the screen.
+            <br>
+            1. Redrawing: when visual changes occur on a web page (for example, color changes, visibility) This process is called redrawing. This does not change the location of the elements, but only their appearance.
+            <br>
+            2. Reformatting: This is the process of calculating the layout and position of elements on a page. When something affects the size or position of an element (for example, adding or removing content, changing width or height). Reformatting is a more expensive process than redrawing because it involves recalculating the entire page layout.
+        </p>
+    </div>
+    <div class="item">
+        <h2>Question 2</h2>
+        <h3>How does JavaScript on the webpage affect the page load speed and performance?</h3>
+        <p>
+            JavaScript on a web page can affect page loading speed and overall performance in several ways:
+            <br>
+            1. Blocking rendering: When the browser detects JavaScript code while parsing HTML, it stops rendering the page and executes the JavaScript code. If the JavaScript code takes a long time to execute, it delays the rendering of the page, which leads to a decrease in the page loading speed.
+            <br>
+            2. Code optimization: Poorly optimized JavaScript code or excessive use of JavaScript can negatively affect performance. Inefficient code can increase the processing time required by the browser, which will lead to a decrease in page performance.
+        </p>
+    </div>
+    <div class="item">
+        <h2>Question 3</h2>
+        <h3>What is “minification” of the script? Why is it useful to minify your scripts?</h3>
+        <p>
+            Script "minimization" is the process of removing unnecessary characters from the code (spaces, line breaks, and comments). The main purpose of minimizing scripts is to reduce the size of their files.
+            <br>
+            By removing unnecessary characters, the size of the script is reduced, which speeds up the download for users. Minification also makes the code more difficult for people to read and understand, but this does not affect the functionality of the script.
+        </p>
+    </div>
+    <div class="item">
+        <h2>Question 4</h2>
+        <h3>What is a JS Web Worker and when do we need it?</h3>
+        <p>
+            JS Web Worker is a browser feature that allows JavaScript code to run in the background independently of the main browser thread. It provides parallel execution of JavaScript code, which can be useful for performing computationally demanding tasks without blocking the main thread.
+        </p>
+    </div>
+    <div class="item">
+        <h2>Links</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Performance/JavaScript">MDN: JavaScript Performance Optimization</a></li>
+            <li><a href="https://www.cloudflare.com/learning/performance/why-minify-javascript-code/">Cloudflare: Why Minify JavaScript Code?</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">MDN: Using Web Workers</a></li>
+
+<li><a href="https://owlcarousel2.github.io/OwlCarousel2/demos/basic.html">Owl Carousel Basic Demo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 1 },
+                1000: { items: 1 }
+            }
+        });
+    });
+</script>
+</body>
+</html>
